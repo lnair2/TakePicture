@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="myscript.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+  <body>
+    <h1>Photo Booth</h1>
+    <!-- div to center video-->
+    <div class="center">
+      <video id="video"autoplay playsinline icons=false>Sorry, your device doesn't support video.</video>
+    </div>
+    <!-- div to align buttons-->
+    <div class ="bottom">
+      <button id="stop" onclick="clearphoto(); endVideo();"><img id="circleExit" src="exit.png"></button>
+      <button id="play" onclick="getVideo()"><img id="circleVid" src="Video.png"></button>
+      <button id="start" ><img id="camera" src="Camera.png"></button>
+    </div>
+    <!-- canvas and photo that will be captured-->
+    <canvas id="canvas"></canvas>
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </body>
+</html>

@@ -1,0 +1,112 @@
+html{
+  margin: 0;
+  background-color: #3B3B3B;
+}
+h1{
+  text-align: center;
+  color: #9A9A9A;
+  font-family: Helvetica Neue;
+}
+
+.center{
+  width: 50%;
+  height: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+video{
+  border:4px solid black;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit:initial;
+}
+
+/*styling for button div*/
+.bottom{
+  position: relative;
+  width: 30%;
+  height: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: grid;
+}
+
+button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  padding: 20px;
+  position:relative;
+  margin:auto;
+  background-size:contain;
+  background-position: center;
+}
+
+img{
+  align-self: flex-start;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#stop{
+  grid-column: 2;
+  grid-row: 1;
+}
+#play{
+  grid-column: 3;
+  grid-row: 1;
+}
+#start{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/*style canvas*/
+#canvas{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+}
+#photo{
+  visibility: hidden;
+}
+
+
+/* Responsive styling*/
+
+@media screen and (max-width: 800px) {
+  .bottom{
+    position: relative;
+    width: 80%;
+    height: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .center{
+      width: 90%;
+      height: 30%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  #canvas{
+    height: 30%;
+    width: 60%;
+  }
+}
