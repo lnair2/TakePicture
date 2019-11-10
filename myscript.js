@@ -12,6 +12,8 @@ function getVideo(){
     }).catch(function(err) { //logs the error to the console
       console.log("Video capture error: ", error.code);
     });
+    play.style.zIndex = "-1";
+    stop.style.zIndex = "4"
   }
 }
 //stops each track and ends video streaming
@@ -25,6 +27,8 @@ function endVideo(){
     var track = tracks[x];
     track.stop();
   }
+  play.style.zIndex = "4";
+  stop.style.zIndex = "-1"
   video.srcObject = null;
 }
 //clear the photo from the canvas
@@ -34,6 +38,8 @@ function clearphoto() {
   var area = canvas.getContext('2d');
   area.fillStyle = "#3B3B3B";
   area.fillRect(0, 0, canvas.width, canvas.height);
+  play.style.zIndex = "-1";
+  stop.style.zIndex = "4"
 }
 
 //taking picture functionality
@@ -54,7 +60,7 @@ void function takePic(){
     start = document.getElementById('start');
     stop = document.getElementById('stop')
 
-    getVideo()
+    getVideo();
 
     //checking if compatible with usermedia
     video.addEventListener('canplay', function(){
@@ -83,7 +89,7 @@ void function takePic(){
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
 
-    endVideo();
+    //endVideo();
   }
 
   window.addEventListener('load', startup, false); //waits for window to load completely
