@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript" src="myscript.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css" />
-
+<head>
+  <script type="text/javascript" src="myscript.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title> Take Picture</title>
+</head>
   <body>
     <h1>Photo Booth</h1>
     <!-- div to center video-->
     <div class="center">
-      <video id="video"autoplay playsinline icons=false>Sorry, your device doesn't support video.</video>
+      <video id="video" autoplay playsinline>Sorry, your device doesn't support video.</video>
     </div>
     <!-- div to align buttons-->
     <div class ="bottom">
-      <button id="stop" onclick="endVideo();"><img id="circleExit" src="newStop.png"></button>
-      <button id="play" onclick="getVideo()"><img id="circleVid" src="newPlay.png"></button>
-      <button id="start" ><img id="camera" src="Button Photo.png"></button>
+      <button id="stop" onclick="endVideo();"><img id="circleExit" src="newStop.png" alt="Stop Button"></button>
+      <button id="play" onclick="getVideo()"><img id="circleVid" src="newPlay.png" alt="Play Button"></button>
+      <button id="start" ><img id="camera" src="Button Photo.png" alt="Take Picture Button"></button>
     </div>
     <!-- canvas and photo that will be captured-->
     <canvas id="canvas"></canvas>
